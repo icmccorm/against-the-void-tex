@@ -1,0 +1,1652 @@
+
+@techreport{aapcs,
+	title        = {Procedure Call Standard for the ARM\textregistered{} Architecture},
+	year         = 2009,
+	month        = oct,
+	institution  = {ARM},
+}
+
+@misc{llvm_atomics,
+	title        = {LLVM Atomic Instructions and Concurrency Guide},
+	year         = 2023,
+	month        = jul,
+	day          = 19,
+	publisher    = {The LLVM Compiler Infrastructure},
+	url          = {https://llvm.org/docs/Atomics.html},
+}
+
+@misc{llvm_ref,
+	title        = {LLVM Language Reference Manual},
+	year         = 2023,
+	month        = jul,
+	day          = 19,
+	publisher    = {The LLVM Compiler Infrastructure},
+	url          = {https://llvm.org/docs/LangRef.html},
+}
+
+@online{qualtrics,
+	title        = {Qualtrics},
+	year         = 2024,
+	url          = {https://www.qualtrics.com},
+}
+
+@techreport{rfc2045,
+	title        = {target\_feature / cfg\_target\_feature / cfg\_feature\_enabled},
+	year         = 2017,
+	month        = {06},
+	day          = 26,
+	number       = 2045,
+	url          = {https://rust-lang.github.io/rfcs/2045-target-feature.html},
+	howpublished = {Rust RFC Book},
+	type         = {RFC},
+}
+
+@techreport{rfc2396,
+	title        = {\#[target\_feature] 1.1},
+	year         = 2018,
+	month        = apr,
+	day          = 6,
+	number       = 2396,
+	url          = {https://rust-lang.github.io/rfcs/2396-target-feature-1.1.html},
+	howpublished = {Rust RFC Book},
+	type         = {RFC},
+}
+
+@misc{rust_ref,
+	title        = {2396-target-feature-1.1},
+	year         = 2023,
+	month        = jul,
+	day          = 19,
+	publisher    = {The LLVM Compiler Infrastructure},
+	url          = {https://rust-lang.github.io/rfcs/2396-target-feature-1.1.html},
+}
+
+@misc{rust_safety_dance,
+	title        = {Rust Safety Dance},
+	year         = 2019,
+	journal      = {GitHub repository},
+	publisher    = {GitHub},
+	howpublished = {\url{https://github.com/rust-secure-code/safety-dance/}},
+}
+
+@article{astrauskas20,
+	title        = {How Do Programmers Use Unsafe Rust?},
+	author       = {
+		Astrauskas, Vytautas and Matheja, Christoph and Poli, Federico and
+		M\"{u}ller, Peter and Summers, Alexander J.
+	},
+	year         = 2020,
+	month        = nov,
+	journal      = {Proc. ACM Program. Lang.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 4,
+	number       = {OOPSLA},
+	doi          = {10.1145/3428204},
+	url          = {https://doi.org/10.1145/3428204},
+	issue_date   = {November 2020},
+	articleno    = 136,
+	numpages     = 27,
+	keywords     = {Rust hypothesis, Rust, empirical study, unsafe code},
+}
+
+@inproceedings{bae21,
+	title        = {Rudra: Finding Memory Safety Bugs in Rust at the Ecosystem Scale},
+	author       = {
+		Bae, Yechan and Kim, Youngsuk and Askar, Ammar and Lim, Jungwon and Kim,
+		Taesoo
+	},
+	year         = 2021,
+	booktitle    = {
+		Proceedings of the ACM SIGOPS 28th Symposium on Operating Systems Principles
+	},
+	location     = {Virtual Event, Germany},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {SOSP '21},
+	pages        = {84–99},
+	doi          = {10.1145/3477132.3483570},
+	isbn         = 9781450387095,
+	url          = {https://doi.org/10.1145/3477132.3483570},
+	numpages     = 16,
+	keywords     = {Program analysis, Rust, Memory-safety},
+}
+
+@misc{lifetime_inference,
+	author       = {
+		Brænne, Martin and Dejanovska, Rosica and Horváth, Gábor and Gribenko, Dmitri
+		and Versari, Luca
+	},
+        title       = {[RFC] Lifetime annotations for C++},
+	year         = 2022,
+	month        = apr,
+	journal      = {LLVM Discussion Forums},
+	url          = {https://discourse.llvm.org/t/rfc-lifetime-annotations-for-c/61377},
+	abstractnote = {
+		We are designing, implementing, and evaluating an attribute-based annotation
+		scheme for C++ that describes object lifetime contracts. It allows relatively
+		cheap, scalable, local static analysis to find many common cases of
+		heap-use-after-free and stack-use-after-return bugs.
+	},
+	language     = {en},
+}
+
+@inproceedings{fulton21,
+	title        = {
+		Benefits and Drawbacks of Adopting a Secure Programming Language: Rust as a
+		Case Study
+	},
+	author       = {
+		Fulton, Kelsey R. and Chan, Anna and Votipka, Daniel and Hicks, Michael and
+		Mazurek, Michelle L.
+	},
+	year         = 2021,
+	booktitle    = {
+		Proceedings of the Seventeenth USENIX Conference on Usable Privacy and
+		Security
+	},
+	publisher    = {USENIX Association},
+	address      = {USA},
+	series       = {SOUPS'21},
+	isbn         = {978-1-939133-25-0},
+	url          = {https://www.usenix.org/conference/soups2021/presentation/fulton},
+	abstract     = {
+		Programming languages such as Rust and Go were developed to combat common and
+		potentially devastating memory-safety-related vulnerabilities. But adoption
+		of new, more secure languages can be fraught and complex. To better
+		understand the benefits and challenges of adopting Rust in particular, we
+		conducted semi-structured interviews with professional, primarily senior
+		software developers who have worked with Rust on their teams or tried to
+		introduce it (n = 16), and we deployed a survey to the Rust development
+		community (n = 178). We asked participants about their personal experiences
+		using Rust, as well as experiences using Rust at their companies. We find a
+		range of positive features, including good tooling and documentation,
+		benefits for the development lifecycle, and improvement of overall secure
+		coding skills, as well as drawbacks including a steep learning curve, limited
+		library support, and concerns about the ability to hire additional Rust
+		developers in the future. Our results have implications for promoting the
+		adoption of Rust specifically and secure programming languages and tools more
+		generally.
+	},
+	articleno    = 31,
+	numpages     = 20,
+}
+
+@misc{refinedrust,
+	title        = {RefinedRust: Towards high-assurance verification of unsafe Rust programs},
+	author       = {
+		Gäher, Lennard and Sammler, Michael and Jung, Ralf and Krebbers, Robbert and
+		Dreyer, Derek
+	},
+	year         = 2023,
+	month        = apr,
+	location     = {Paris},
+	url          = {https://people.mpi-sws.org/~gaeher/slides/refinedrust\%5Frw23.pdf},
+	note         = {Accessed: 2023-10-20},
+	howpublished = {Rust Verification Workshop},
+}
+
+@article{rustbelt_jung18,
+	title        = {RustBelt: Securing the Foundations of the Rust Programming Language},
+	author       = {
+		Jung, Ralf and Jourdan, Jacques-Henri and Krebbers, Robbert and Dreyer, Derek
+	},
+	year         = 2017,
+	month        = dec,
+	journal      = {Proc. ACM Program. Lang.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 2,
+	number       = {POPL},
+	doi          = {10.1145/3158154},
+	url          = {https://doi.org/10.1145/3158154},
+	issue_date   = {January 2018},
+	abstract     = {
+		Rust is a new systems programming language that promises to overcome the
+		seemingly fundamental tradeoff between high-level safety guarantees and
+		low-level control over resource management. Unfortunately, none of Rust's
+		safety claims have been formally proven, and there is good reason to question
+		whether they actually hold. Specifically, Rust employs a strong,
+		ownership-based type system, but then extends the expressive power of this
+		core type system through libraries that internally use unsafe features. In
+		this paper, we give the first formal (and machine-checked) safety proof for a
+		language representing a realistic subset of Rust. Our proof is extensible in
+		the sense that, for each new Rust library that uses unsafe features, we can
+		say what verification condition it must satisfy in order for it to be deemed
+		a safe extension to the language. We have carried out this verification for
+		some of the most important libraries that are used throughout the Rust
+		ecosystem.
+	},
+	articleno    = 66,
+	numpages     = 34,
+	keywords     = {concurrency, logical relations, separation logic, type systems, Rust},
+}
+
+@article{lattuada23,
+	title        = {Verus: Verifying Rust Programs Using Linear Ghost Types},
+	author       = {
+		Lattuada, Andrea and Hance, Travis and Cho, Chanhee and Brun, Matthias and
+		Subasinghe, Isitha and Zhou, Yi and Howell, Jon and Parno, Bryan and
+		Hawblitzel, Chris
+	},
+	year         = 2023,
+	month        = apr,
+	journal      = {Proc. ACM Program. Lang.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 7,
+	number       = {OOPSLA1},
+	doi          = {10.1145/3586037},
+	url          = {https://doi.org/10.1145/3586037},
+	issue_date   = {April 2023},
+	abstract     = {
+		The Rust programming language provides a powerful type system that checks
+		linearity and borrowing, allowing code to safely manipulate memory without
+		garbage collection and making Rust ideal for developing low-level,
+		high-assurance systems. For such systems, formal verification can be useful
+		to prove functional correctness properties beyond type safety. This paper
+		presents Verus, an SMT-based tool for formally verifying Rust programs. With
+		Verus, programmers express proofs and specifications using the Rust language,
+		allowing proofs to take advantage of Rust's linear types and borrow checking.
+		We show how this allows proofs to manipulate linearly typed permissions that
+		let Rust code safely manipulate memory, pointers, and concurrent resources.
+		Verus organizes proofs and specifications using a novel mode system that
+		distinguishes specifications, which are not checked for linearity and
+		borrowing, from executable code and proofs, which are checked for linearity
+		and borrowing. We formalize Verus' linearity, borrowing, and modes in a small
+		lambda calculus, for which we prove type safety and termination of
+		specifications and proofs. We demonstrate Verus on a series of examples,
+		including pointer-manipulating code (an xor-based doubly linked list), code
+		with interior mutability, and concurrent code.
+	},
+	articleno    = 85,
+	numpages     = 30,
+	keywords     = {linear types, systems verification, Rust},
+}
+
+@inproceedings{record_and_replay,
+	title        = {Engineering record and replay for deployability},
+	author       = {
+		O'Callahan, Robert and Jones, Chris and Froyd, Nathan and Huey, Kyle and
+		Noll, Albert and Partush, Nimrod
+	},
+	year         = 2017,
+	booktitle    = {
+		Proceedings of the 2017 USENIX Conference on Usenix Annual Technical
+		Conference
+	},
+	location     = {Santa Clara, CA, USA},
+	publisher    = {USENIX Association},
+	address      = {USA},
+	series       = {USENIX ATC '17},
+	pages        = {377–389},
+	isbn         = 9781931971386,
+	url          = {
+		https://www.usenix.org/conference/atc17/technical-sessions/presentation/ocallahan
+	},
+	abstract     = {
+		The ability to record and replay program executions with low overhead enables
+		many applications, such as reverse-execution debugging, debugging of
+		hard-to-reproduce test failures, and "black box" forensic analysis of
+		failures in deployed systems. Existing record-and-replay approaches limit
+		deployability by recording an entire virtual machine (heavyweight), modifying
+		the OS kernel (adding deployment and maintenance costs), requiring pervasive
+		code instrumentation (imposing significant performance and complexity
+		overhead), or modifying compilers and runtime systems (limiting generality).
+		We investigated whether it is possible to build a practical record-and-replay
+		system avoiding all these issues. The answer turns out to be yes--if the CPU
+		and operating system meet certain non-obvious constraints. Fortunately modern
+		Intel CPUs, Linux kernels and user-space frameworks do meet these
+		constraints, although this has only become true recently. With some novel
+		optimizations, our system RR records and replays real-world low-parallelism
+		workloads with low overhead, with an entirely user-space implementation,
+		using stock hardware, compilers, runtimes and operating systems. RR forms the
+		basis of an open-source reverse-execution debugger seeing significant use in
+		practice. We present the design and implementation of RR, describe its
+		performance on a variety of workloads, and identify constraints on hardware
+		and operating system design required to support our approach.
+	},
+	numpages     = 13,
+}
+
+@inproceedings{pereira17,
+	title        = {
+		Energy Efficiency across Programming Languages: How Do Energy, Time, and
+		Memory Relate?
+	},
+	author       = {
+		Pereira, Rui and Couto, Marco and Ribeiro, Francisco and Rua, Rui and Cunha,
+		J\'{a}come and Fernandes, Jo\~{a}o Paulo and Saraiva, Jo\~{a}o
+	},
+	year         = 2017,
+	booktitle    = {
+		Proceedings of the 10th ACM SIGPLAN International Conference on Software
+		Language Engineering
+	},
+	location     = {Vancouver, BC, Canada},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {SLE 2017},
+	pages        = {256–267},
+	doi          = {10.1145/3136014.3136031},
+	isbn         = 9781450355254,
+	url          = {https://doi.org/10.1145/3136014.3136031},
+	abstract     = {
+		This paper presents a study of the runtime, memory usage and energy
+		consumption of twenty seven well-known software languages. We monitor the
+		performance of such languages using ten different programming problems,
+		expressed in each of the languages. Our results show interesting findings,
+		such as, slower/faster languages consuming less/more energy, and how memory
+		usage influences energy consumption. Finally, we show how to use our results
+		to provide software engineers support to decide which language to use when
+		energy efficiency is a concern.
+	},
+	numpages     = 12,
+	keywords     = {
+		Programming Languages, Green Software, Energy Efficiency, Language
+		Benchmarking
+	},
+}
+
+@inproceedings{qin20,
+	title        = {
+		Understanding memory and thread safety practices and issues in real-world
+		Rust programs
+	},
+	author       = {
+		Qin, Boqin and Chen, Yilun and Yu, Zeming and Song, Linhai and Zhang, Yiying
+	},
+	year         = 2020,
+	month        = jun,
+	booktitle    = {
+		Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design
+		and Implementation
+	},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {PLDI 2020},
+	pages        = {763–779},
+	doi          = {10.1145/3385412.3386036},
+	isbn         = {978-1-4503-7613-6},
+	url          = {https://doi.org/10.1145/3385412.3386036},
+	collection   = {PLDI 2020},
+}
+
+@inproceedings{whisper,
+	title        = {Robust Speech Recognition via Large-Scale Weak Supervision},
+	author       = {
+		Radford, Alec and Kim, Jong Wook and Xu, Tao and Brockman, Greg and Mcleavey,
+		Christine and Sutskever, Ilya
+	},
+	year         = 2023,
+	month        = {23--29 Jul},
+	booktitle    = {Proceedings of the 40th International Conference on Machine Learning},
+	publisher    = {PMLR},
+	series       = {Proceedings of Machine Learning Research},
+	volume       = 202,
+	pages        = {28492--28518},
+	url          = {https://proceedings.mlr.press/v202/radford23a.html},
+	editor       = {
+		Krause, Andreas and Brunskill, Emma and Cho, Kyunghyun and Engelhardt,
+		Barbara and Sabato, Sivan and Scarlett, Jonathan
+	},
+	pdf          = {https://proceedings.mlr.press/v202/radford23a/radford23a.pdf},
+	abstract     = {
+		We study the capabilities of speech processing systems trained simply to
+		predict large amounts of transcripts of audio on the internet. When scaled to
+		680,000 hours of multilingual and multitask supervision, the resulting models
+		generalize well to standard benchmarks and are often competitive with prior
+		fully supervised results without the need for any dataset specific
+		fine-tuning. When compared to humans, the models approach their accuracy and
+		robustness. We are releasing models and inference code to serve as a
+		foundation for further work on robust speech processing.
+	},
+}
+
+@inproceedings{sammler21,
+	title        = {
+		RefinedC: Automating the Foundational Verification of C Code with Refined
+		Ownership Types
+	},
+	author       = {
+		Sammler, Michael and Lepigre, Rodolphe and Krebbers, Robbert and Memarian,
+		Kayvan and Dreyer, Derek and Garg, Deepak
+	},
+	year         = 2021,
+	booktitle    = {
+		Proceedings of the 42nd ACM SIGPLAN International Conference on Programming
+		Language Design and Implementation
+	},
+	location     = {Virtual, Canada},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {PLDI 2021},
+	pages        = {158–174},
+	doi          = {10.1145/3453483.3454036},
+	isbn         = 9781450383912,
+	url          = {https://doi.org/10.1145/3453483.3454036},
+	abstract     = {
+		Given the central role that C continues to play in systems software, and the
+		difficulty of writing safe and correct C code, it remains a grand challenge
+		to develop effective formal methods for verifying C programs. In this paper,
+		we propose a new approach to this problem: a type system we call RefinedC,
+		which combines ownership types (for modular reasoning about shared state and
+		concurrency) with refinement types (for encoding precise invariants on C data
+		types and Hoare-style specifications for C functions). RefinedC is both
+		automated (requiring minimal user intervention) and foundational (producing a
+		proof of program correctness in Coq), while at the same time handling a range
+		of low-level programming idioms such as pointer arithmetic. In particular,
+		following the approach of RustBelt, the soundness of the RefinedC type system
+		is justified semantically by interpretation into the Coq-based Iris framework
+		for higher-order concurrent separation logic. However, the typing rules of
+		RefinedC are also designed to be encodable in a new “separation logic
+		programming” language we call Lithium. By restricting to a carefully chosen
+		(yet expressive) fragment of separation logic, Lithium supports predictable,
+		automatic, goal-directed proof search without backtracking. We demonstrate
+		the effectiveness of RefinedC on a range of representative examples of C
+		code.
+	},
+	numpages     = 17,
+	keywords     = {
+		refinement types, ownership types, C programming language, Coq, separation
+		logic, Iris, proof automation
+	},
+}
+
+@inproceedings{holtervennhoff23,
+	title        = {
+		{{\textquotedblleft}I} wouldn{\textquoteright}t want my unsafe code to run my
+		{pacemaker{\textquotedblright}}: An Interview Study on the Use,
+		Comprehension, and Perceived Risks of Unsafe Rust
+	},
+	author       = {
+		Sandra H{\"o}ltervennhoff and Philip Klostermeyer and Noah W{\"o}hler and
+		Yasemin Acar and Sascha Fahl
+	},
+	year         = 2023,
+	month        = aug,
+	booktitle    = {32nd USENIX Security Symposium (USENIX Security 23)},
+	publisher    = {USENIX Association},
+	address      = {Anaheim, CA},
+	pages        = {2509--2525},
+	isbn         = {978-1-939133-37-3},
+	url          = {
+		https://www.usenix.org/conference/usenixsecurity23/presentation/holtervennhoff
+	},
+}
+
+@inproceedings{kani_vanhattum22,
+	title        = {Verifying dynamic trait objects in rust},
+	author       = {
+		VanHattum, Alexa and Schwartz-Narbonne, Daniel and Chong, Nathan and Sampson,
+		Adrian
+	},
+	year         = 2022,
+	booktitle    = {
+		Proceedings of the 44th International Conference on Software Engineering:
+		Software Engineering in Practice
+	},
+	location     = {Pittsburgh, Pennsylvania},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {ICSE-SEIP '22},
+	pages        = {321–330},
+	doi          = {10.1145/3510457.3513031},
+	isbn         = 9781450392266,
+	url          = {https://doi.org/10.1145/3510457.3513031},
+	abstract     = {
+		Rust has risen in prominence as a systems programming language in large part
+		due to its focus on reliability. The language's advanced type system and
+		borrow checker eliminate certain classes of memory safety violations. But for
+		critical pieces of code, teams need assurance beyond what the type checker
+		alone can provide. Verification tools for Rust can check other properties,
+		from memory faults in unsafe Rust code to user-defined correctness
+		assertions. This paper particularly focuses on the challenges in reasoning
+		about Rust's dynamic trait objects, a feature that provides dynamic dispatch
+		for function abstractions. While the explicit dyn keyword that denotes
+		dynamic dispatch is used in 37\% of the 500 most-downloaded Rust libraries
+		(crates), dynamic dispatch is implicitly linked into 70\%. To our knowledge,
+		our open-source Kani Rust Verifier is the first symbolic modeling checking
+		tool for Rust that can verify correctness while supporting the breadth of
+		dynamic trait objects, including dynamically dispatched closures. We show how
+		our system uses semantic trait information from Rust's Mid-level Intermediate
+		Representation (an advantage over targeting a language-agnostic level such as
+		LLVM) to improve verification performance by 5\%--15\texttimes{} for examples
+		from open-source virtualization software. Finally, we share an open-source
+		suite of verification test cases for dynamic trait objects.
+	},
+	numpages     = 10,
+	keywords     = {verification, rust, model checking, dynamic dispatch},
+}
+
+@article{xu2021,
+	title        = {
+		Memory-Safety Challenge Considered Solved? An In-Depth Study with All Rust
+		CVEs
+	},
+	author       = {
+		Xu, Hui and Chen, Zhuangbin and Sun, Mingshen and Zhou, Yangfan and Lyu,
+		Michael R.
+	},
+	year         = 2021,
+	month        = sep,
+	journal      = {ACM Trans. Softw. Eng. Methodol.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 31,
+	number       = 1,
+	doi          = {10.1145/3466642},
+	issn         = {1049-331X},
+	url          = {https://doi.org/10.1145/3466642},
+	issue_date   = {January 2022},
+	articleno    = 3,
+	numpages     = 25,
+	keywords     = {common vulnerability and exposures, memory-safety bugs, Rust},
+}
+
+@article{xu22,
+	title        = {
+		Memory-Safety Challenge Considered Solved? An In-Depth Study with All Rust
+		CVEs
+	},
+	author       = {
+		Xu, Hui and Chen, Zhuangbin and Sun, Mingshen and Zhou, Yangfan and Lyu,
+		Michael R.
+	},
+	year         = 2021,
+	month        = {sep},
+	journal      = {ACM Trans. Softw. Eng. Methodol.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 31,
+	number       = 1,
+	doi          = {10.1145/3466642},
+	issn         = {1049-331X},
+	url          = {https://doi.org/10.1145/3466642},
+	issue_date   = {January 2022},
+	abstract     = {
+		Rust is an emerging programming language that aims at preventing
+		memory-safety bugs without sacrificing much efficiency. The claimed property
+		is very attractive to developers, and many projects start using the language.
+		However, can Rust achieve the memory-safety promise? This article studies the
+		question by surveying 186 real-world bug reports collected from several
+		origins, which contain all existing Rust common vulnerability and exposures
+		(CVEs) of memory-safety issues by 2020-12-31. We manually analyze each bug
+		and extract their culprit patterns. Our analysis result shows that Rust can
+		keep its promise that all memory-safety bugs require unsafe code, and many
+		memory-safety bugs in our dataset are mild soundness issues that only leave a
+		possibility to write memory-safety bugs without unsafe code. Furthermore, we
+		summarize three typical categories of memory-safety bugs, including automatic
+		memory reclaim, unsound function, and unsound generic or trait. While
+		automatic memory claim bugs are related to the side effect of Rust
+		newly-adopted ownership-based resource management scheme, unsound function
+		reveals the essential challenge of Rust development for avoiding unsound
+		code, and unsound generic or trait intensifies the risk of introducing
+		unsoundness. Based on these findings, we propose two promising directions
+		toward improving the security of Rust development, including several best
+		practices of using specific APIs and methods to detect particular bugs
+		involving unsafe code. Our work intends to raise more discussions regarding
+		the memory-safety issues of Rust and facilitate the maturity of the language.
+	},
+	articleno    = 3,
+	numpages     = 25,
+	keywords     = {common vulnerability and exposures, memory-safety bugs, Rust},
+}
+
+@inproceedings{zhu22,
+	title        = {Learning and Programming Challenges of Rust: A Mixed-Methods Study},
+	author       = {
+		Zhu, Shuofei and Zhang, Ziyi and Qin, Boqin and Xiong, Aiping and Song,
+		Linhai
+	},
+	year         = 2022,
+	booktitle    = {Proceedings of the 44th International Conference on Software Engineering},
+	location     = {Pittsburgh, Pennsylvania},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {ICSE '22},
+	pages        = {1269–1281},
+	doi          = {10.1145/3510003.3510164},
+	isbn         = 9781450392211,
+	url          = {https://doi.org/10.1145/3510003.3510164},
+	abstract     = {
+		Rust is a young systems programming language designed to provide both the
+		safety guarantees of high-level languages and the execution performance of
+		low-level languages. To achieve this design goal, Rust provides a suite of
+		safety rules and checks against those rules at the compile time to eliminate
+		many memory-safety and thread-safety issues. Due to its safety and
+		performance, Rust's popularity has increased significantly in recent years,
+		and it has already been adopted to build many safety-critical software
+		systems.It is critical to understand the learning and programming challenges
+		imposed by Rust's safety rules. For this purpose, we first conducted an
+		empirical study through close, manual inspection of 100 Rust-related Stack
+		Overflow questions. We sought to understand (1) what safety rules are
+		challenging to learn and program with, (2) under which contexts a safety rule
+		becomes more difficult to apply, and (3) whether the Rust compiler is
+		sufficiently helpful in debugging safety-rule violations. We then performed
+		an online survey with 101 Rust programmers to validate the findings of the
+		empirical study. We invited participants to evaluate program variants that
+		differ from each other, either in terms of violated safety rules or the code
+		constructs involved in the violation, and compared the participants'
+		performance on the variants. Our mixed-methods investigation revealed a range
+		of consistent findings that can benefit Rust learners, practitioners, and
+		language designers.
+	},
+	numpages     = 13,
+	keywords     = {online survey, empirical study, rust, programming challenges},
+}
+
+@misc{clang,
+	title        = {Clang 18.0.0git documentation},
+	author       = {{LLVM Project}},
+	year         = 2024,
+	month        = jan,
+	howpublished = {\url{https://clang.llvm.org/docs/}},
+}
+
+@misc{libfuzzer,
+	title        = {libFuzzer – a library for coverage-guided fuzz testing.},
+	author       = {{LLVM Project}},
+	year         = 2022,
+	month        = oct,
+	howpublished = {
+		\url{https://github.com/llvm/llvm-project/blob/main/llvm/docs/LibFuzzer.rst}
+	},
+}
+
+@misc{actix_web_letter,
+	title        = {actix-support/letter},
+	author       = {{Rust Community}},
+	year         = 2020,
+	journal      = {GitHub repository},
+	publisher    = {GitHub},
+	howpublished = {\url{https://github.com/actix-support/letter}},
+}
+
+@misc{bindgen,
+	title        = {The `bindgen` User Guide},
+	author       = {{Rust Community}},
+	year         = 2023,
+	month        = oct,
+	howpublished = {\url{https://rust-lang.github.io/rust-bindgen/}},
+}
+
+@misc{cbindgen,
+	title        = {cbindgen User Guide},
+	author       = {{Rust Community}},
+	year         = 2023,
+	month        = nov,
+	howpublished = {\url{https://github.com/mozilla/cbindgen/blob/master/docs.md}},
+}
+
+@inproceedings{rr_debugger,
+author = {O'Callahan, Robert and Jones, Chris and Froyd, Nathan and Huey, Kyle and Noll, Albert and Partush, Nimrod},
+title = {Engineering record and replay for deployability},
+year = {2017},
+isbn = {9781931971386},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {The ability to record and replay program executions with low overhead enables many applications, such as reverse-execution debugging, debugging of hard-to-reproduce test failures, and "black box" forensic analysis of failures in deployed systems. Existing record-and-replay approaches limit deployability by recording an entire virtual machine (heavyweight), modifying the OS kernel (adding deployment and maintenance costs), requiring pervasive code instrumentation (imposing significant performance and complexity overhead), or modifying compilers and runtime systems (limiting generality). We investigated whether it is possible to build a practical record-and-replay system avoiding all these issues. The answer turns out to be yes--if the CPU and operating system meet certain non-obvious constraints. Fortunately modern Intel CPUs, Linux kernels and user-space frameworks do meet these constraints, although this has only become true recently. With some novel optimizations, our system RR records and replays real-world low-parallelism workloads with low overhead, with an entirely user-space implementation, using stock hardware, compilers, runtimes and operating systems. RR forms the basis of an open-source reverse-execution debugger seeing significant use in practice. We present the design and implementation of RR, describe its performance on a variety of workloads, and identify constraints on hardware and operating system design required to support our approach.},
+booktitle = {Proceedings of the 2017 USENIX Conference on Usenix Annual Technical Conference},
+pages = {377–389},
+numpages = {13},
+location = {Santa Clara, CA, USA},
+series = {USENIX ATC '17}
+}
+
+@misc{cargo_geiger,
+	title        = {rust-secure-code/cargo-geiger},
+	author       = {{Rust Community}},
+	year         = 2020,
+	journal      = {GitHub repository},
+	publisher    = {GitHub},
+	howpublished = {\url{https://github.com/rust-secure-code/cargo-geiger}},
+}
+
+@misc{libc,
+	title        = {libc - Raw FFI bindings to platforms' system libraries},
+	author       = {{Rust Community}},
+	year         = 2022,
+	month        = nov,
+	howpublished = {\url{https://rust-lang.github.io/libc/\#platform-specific-documentation}},
+}
+
+@misc{nomicon,
+	title        = {The Rustonomicon},
+	author       = {{Rust Community}},
+	year         = 2023,
+	month        = oct,
+	howpublished = {\url{https://doc.rust-lang.org/nomicon/}},
+}
+
+@misc{rustc_dev,
+	title        = {Guide to Rustc Development},
+	author       = {{Rust Community}},
+	year         = 2022,
+	month        = nov,
+	howpublished = {\url{https://rustc-dev-guide.rust-lang.org/overview.html}},
+}
+
+@misc{rustc_lint,
+	title        = {Crate `rustc\_lint`},
+	author       = {{Rust Community}},
+	year         = 2022,
+	month        = nov,
+	howpublished = {\url{https://doc.rust-lang.org/stable/nightly-rustc/rustc\_lint/index.html}},
+}
+
+@misc{rustref,
+	title        = {The Rust Reference},
+	author       = {{Rust Community}},
+	year         = 2023,
+	month        = nov,
+	howpublished = {\url{https://doc.rust-lang.org/reference/}},
+}
+
+@misc{ucgref,
+	title        = {Unsafe Code Guidelines Reference},
+	author       = {{Rust Community}},
+	year         = 2023,
+	month        = oct,
+	howpublished = {\url{https://rust-lang.github.io/unsafe-code-guidelines/}},
+}
+
+@misc{rustrfc,
+	title        = {The Rust RFC Book},
+	author       = {{Rust Community}},
+	year         = 2022,
+	month        = nov,
+	howpublished = {\url{https://rust-lang.github.io/rfcs/}},
+}
+
+@misc{ruststd,
+	title        = {The Rust Standard Library},
+	author       = {{Rust Community}},
+	year         = 2022,
+	month        = nov,
+	howpublished = {\url{https://doc.rust-lang.org/std/index.html}},
+}
+
+@misc{rustunstable,
+	title        = {The Unstable Book},
+	author       = {{Rust Community}},
+	year         = 2022,
+	month        = nov,
+	howpublished = {\url{https://doc.rust-lang.org/beta/unstable-book/}},
+}
+
+@misc{wasm-bindgen,
+	title        = {The `wasm-bindgen` Guide},
+	author       = {{Rust Community}},
+	year         = 2023,
+	month        = oct,
+	howpublished = {\url{https://rustwasm.github.io/wasm-bindgen/}},
+}
+
+@misc{cxx,
+	title        = {CXX — safe interop between Rust and C++},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = jan,
+	howpublished = {\url{https://cxx.rs/}},
+}
+
+@misc{rustfmt,
+	title        = {rustfmt},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = mar,
+	howpublished = {\url{https://rust-lang.github.io/rustfmt/}},
+}
+@misc{clippy,
+	title        = {Clippy Documentation},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = mar,
+	howpublished = {\url{https://doc.rust-lang.org/clippy/#clippy}},
+}
+
+
+
+
+@misc{py03,
+	title        = {The PyO3 user guide},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = jan,
+	howpublished = {\url{https://pyo3.rs/v0.20.2/}},
+}
+
+@misc{miri,
+	title        = {Miri},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = jan,
+	howpublished = {\url{https://github.com/rust-lang/miri}},
+}
+
+@misc{cargoaudit,
+	title        = {cargo audit},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = feb,
+	howpublished = {\url{https://github.com/RustSec/rustsec/tree/main/cargo-audit}},
+}
+
+@misc{cargodeny,
+	title        = {cargo-deny},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = feb,
+	howpublished = {\url{https://embarkstudios.github.io/cargo-deny/}},
+}
+
+@misc{cargovet,
+	title        = {Cargo Vet},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = feb,
+	howpublished = {\url{https://mozilla.github.io/cargo-vet/index.html}},
+}
+
+@misc{cargogeiger,
+	title        = {cargo-geiger},
+	author       = {{Rust Community}},
+	year         = 2024,
+	month        = feb,
+	howpublished = {\url{https://github.com/geiger-rs/cargo-geiger}},
+}
+
+@online{stackoverflow_dev_survey23,
+	title        = {Stack Overflow Developer Survey 2023},
+	author       = {{Stack Overflow}},
+	year         = 2023,
+	publisher    = {Stack Overflow},
+	url          = {https://survey.stackoverflow.co/2023/},
+	lastaccessed = {2023-06-29},
+	shorthand    = {Stack Overflow},
+}
+
+@article{krippendorff_alpha,
+	title        = {Answering the Call for a Standard Reliability Measure for Coding Data},
+	author       = {Andrew F. Hayes and Klaus Krippendorff},
+	year         = 2007,
+	journal      = {Communication Methods and Measures},
+	publisher    = {Routledge},
+	volume       = 1,
+	number       = 1,
+	pages        = {77--89},
+	doi          = {10.1080/19312450709336664},
+	url          = {https://doi.org/10.1080/19312450709336664},
+	eprint       = {https://doi.org/10.1080/19312450709336664},
+	bdsk-url-1   = {https://doi.org/10.1080/19312450709336664},
+}
+
+@online{atlasti,
+	title        = {ATLAS.ti Web},
+	author       = {ATLAS.ti Scientific Software Development GmbH.},
+	year         = 2024,
+	url          = {https://atlasti.com/},
+}
+
+@misc{ucg_ref_ub,
+	title        = {
+		Document current justification for not requiring recursive reference validity
+		(in particular, \code{\&mut uninit} not being immediate UB)
+	},
+	author       = {Christopher Durham},
+	year         = 2022,
+	month        = jul,
+	published    = {GitHub},
+	howpublished = {\url{https://github.com/rust-lang/unsafe-code-guidelines/issues/346}},
+}
+
+@online{chrome_rust,
+	title        = {Experimenting with Rust in Chromium},
+	author       = {Chromium community},
+	year         = 2022,
+	url          = {
+		https://chromium.googlesource.com/chromium/src/+/refs/heads/main/docs/security/rust-toolchain.md
+	},
+	lastaccessed = {2022-11-21},
+}
+
+@inproceedings{coblenz22,
+	title        = {
+		Garbage Collection Makes Rust Easier to Use: A Randomized Controlled Trial of
+		the Bronze Garbage Collector
+	},
+	author       = {Coblenz, Michael and Mazurek, Michelle L. and Hicks, Michael},
+	year         = 2022,
+	booktitle    = {Proceedings of the 44th International Conference on Software Engineering},
+	location     = {Pittsburgh, Pennsylvania},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {ICSE '22},
+	pages        = {1021–1032},
+	doi          = {10.1145/3510003.3510107},
+	isbn         = 9781450392211,
+	url          = {https://doi.org/10.1145/3510003.3510107},
+	abstract     = {
+		Rust is a general-purpose programming language that is both type-and
+		memory-safe. Rust does not use a garbage collector, but rather achieves these
+		properties through a sophisticated, but complex, type system. Doing so makes
+		Rust very efficient, but makes Rust relatively hard to learn and use. We
+		designed Bronze, an optional, library-based garbage collector for Rust. To
+		see whether Bronze could make Rust more usable, we conducted a randomized
+		controlled trial with volunteers from a 633--person class, collecting data
+		from 428 students in total. We found that for a task that required managing
+		complex aliasing, Bronze users were more likely to complete the task in the
+		time available, and those who did so required only about a third as much time
+		(4 hours vs. 12 hours). We found no significant difference in total time,
+		even though Bronze users re-did the task without Bronze afterward. Surveys
+		indicated that ownership, borrowing, and lifetimes were primary causes of the
+		challenges that users faced when using Rust.
+	},
+	numpages     = 12,
+	keywords     = {
+		programming education, usability of programming languages, empirical study of
+		programming languages, garbage collection, rust
+	},
+}
+
+@online{linux_rust,
+	title        = {Rust introduction for v6.1-rc1},
+	author       = {Cook, Kees},
+	year         = 2022,
+	url          = {https://lore.kernel.org/lkml/202210010816.1317F2C\@keescook/},
+	lastaccessed = {2022-11-21},
+}
+
+@book{creswell17,
+	title        = {Research design: Qualitative, quantitative, and mixed methods approaches},
+	author       = {Creswell, J.W., and Creswell, J. D.},
+	year         = 2017,
+	publisher    = {Sage Publications},
+	url          = {http://example.com/history\%5Fof\%5Ftime.pdf},
+}
+
+@inproceedings{creusot_denis22,
+	title        = {Creusot: A Foundry For the Deductive Verification Of Rust Programs},
+	author       = {Denis, Xavier and Jourdan, Jacques-Henri and March\'{e}, Claude},
+	year         = 2022,
+	booktitle    = {
+		Formal Methods  and Software Engineering: 23rd International Conference on
+		Formal Engineering Methods, ICFEM 2022, Madrid, Spain, October 24–27, 2022,
+		Proceedings
+	},
+	location     = {Madrid, Spain},
+	publisher    = {Springer-Verlag},
+	address      = {Berlin, Heidelberg},
+	pages        = {90–105},
+	doi          = {10.1007/978-3-031-17244-1\_6},
+	isbn         = {978-3-031-17243-4},
+	url          = {https://doi.org/10.1007/978-3-031-17244-1\%5F6},
+	abstract     = {
+		Rust is a fairly recent programming language for system programming, bringing
+		static guarantees of memory safety through a strict ownership policy. The
+		strong guarantees brought by this feature opens promising progress for
+		deductive verification, which aims at proving the conformity of Rust code
+		with respect to a specification of its intended behavior. We present the
+		foundations of Creusot, a tool for the formal specification and deductive
+		verification of Rust code. A first originality comes from Creusot's
+		specification language, which features a notion of prophecy to reason about
+		memory mutation, working in harmony with Rust's ownership system. A second
+		originality is how Creusot builds upon Rust trait system to provide several
+		advanced abstraction features.
+	},
+	numpages     = 16,
+	keywords     = {
+		Traits, Aliasing and ownership, Deductive program verification, Prophecies,
+		Rust programming language
+	},
+}
+
+@inproceedings{evans20,
+	title        = {Is Rust Used Safely by Software Developers?},
+	author       = {Evans, Ana Nora and Campbell, Bradford and Soffa, Mary Lou},
+	year         = 2020,
+	booktitle    = {
+		Proceedings of the ACM/IEEE 42nd International Conference on Software
+		Engineering
+	},
+	location     = {Seoul, South Korea},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {ICSE '20},
+	pages        = {246–257},
+	doi          = {10.1145/3377811.3380413},
+	isbn         = 9781450371216,
+	url          = {https://doi.org/10.1145/3377811.3380413},
+	numpages     = 12,
+}
+
+@online{oss_fuzz,
+	title        = {OSS-Fuzz: Continuous Fuzzing for Open Source Software},
+	author       = {Google},
+	year         = 2023,
+	url          = {
+		https://github.com/google/oss-fuzz#oss-fuzz-continuous-fuzzing-for-open-source-software
+	},
+	lastaccessed = {2023-10-19},
+}
+
+@online{discord_rust,
+	title        = {Why Discord is switching from Go to Rust},
+	author       = {Howarth, Jesse},
+	year         = 2020,
+	url          = {https://discord.com/blog/why-discord-is-switching-from-go-to-rust},
+	lastaccessed = {2022-11-21},
+}
+
+@article{hsieh05,
+	title        = {Three approaches to qualitative content analysis},
+	author       = {Hsieh, Hsiu-Fang and Shannon, Sarah E},
+	year         = 2005,
+	month        = nov,
+	journal      = {Qualitative Health Research},
+	address      = {United States},
+	volume       = 15,
+	number       = 9,
+	pages        = {1277--1288},
+	abstract     = {
+		Content analysis is a widely used qualitative research technique. Rather than
+		being a single method, current applications of content analysis show three
+		distinct approaches: conventional, directed, or summative. All three
+		approaches are used to interpret meaning from the content of text data and,
+		hence, adhere to the naturalistic paradigm. The major differences among the
+		approaches are coding schemes, origins of codes, and threats to
+		trustworthiness. In conventional content analysis, coding categories are
+		derived directly from the text data. With a directed approach, analysis
+		starts with a theory or relevant research findings as guidance for initial
+		codes. A summative content analysis involves counting and comparisons,
+		usually of keywords or content, followed by the interpretation of the
+		underlying context. The authors delineate analytic procedures specific to
+		each approach and techniques addressing trustworthiness with hypothetical
+		examples drawn from the area of end-of-life care.
+	},
+	language     = {en},
+}
+
+@incollection{mixed_methods_designs,
+	title        = {Advanced Mixed Methods Research Designs},
+	author       = {J. W. Creswell and V. L. Plano Clark and M. L. Gutmann and W. E. Hanson},
+	year         = 2003,
+	booktitle    = {Handbook of Mixed Methods in Social and Behavioral Research},
+	publisher    = {Sage},
+	address      = {Thousand Oaks, CA},
+	pages        = {209--240},
+	editor       = {A. Tashakkori and C. Teddlie},
+	chapter      = 8,
+}
+
+@article{stacked_borrows,
+	title        = {Stacked Borrows: An Aliasing Model for Rust},
+	author       = {Jung, Ralf and Dang, Hoang-Hai and Kang, Jeehoon and Dreyer, Derek},
+	year         = 2019,
+	month        = dec,
+	journal      = {Proc. ACM Program. Lang.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 4,
+	number       = {POPL},
+	doi          = {10.1145/3371109},
+	url          = {https://doi.org/10.1145/3371109},
+	issue_date   = {January 2020},
+	abstract     = {
+		Type systems are useful not just for the safety guarantees they provide, but
+		also for helping compilers generate more efficient code by simplifying
+		important program analyses. In Rust, the type system imposes a strict
+		discipline on pointer aliasing, and it is an express goal of the Rust
+		compiler developers to make use of that alias information for the purpose of
+		program optimizations that reorder memory accesses. The problem is that Rust
+		also supports unsafe code, and programmers can write unsafe code that
+		bypasses the usual compiler checks to violate the aliasing discipline. To
+		strike a balance between optimizations and unsafe code, the language needs to
+		provide a set of rules such that unsafe code authors can be sure, if they are
+		following these rules, that the compiler will preserve the semantics of their
+		code despite all the optimizations it is doing. In this work, we propose
+		Stacked Borrows, an operational semantics for memory accesses in Rust.
+		Stacked Borrows defines an aliasing discipline and declares programs
+		violating it to have undefined behavior, meaning the compiler does not have
+		to consider such programs when performing optimizations. We give formal
+		proofs (mechanized in Coq) showing that this rules out enough programs to
+		enable optimizations that reorder memory accesses around unknown code and
+		function calls, based solely on intraprocedural reasoning. We also
+		implemented this operational model in an interpreter for Rust and ran large
+		parts of the Rust standard library test suite in the interpreter to validate
+		that the model permits enough real-world unsafe Rust code.
+	},
+	articleno    = 41,
+	numpages     = 32,
+	keywords     = {operational semantics, program transformation, alias analysis, Rust},
+}
+
+@misc{rustbook,
+	title        = {The Rust Programming Language},
+	author       = {Klabnik, Steve and Nichols, Carol},
+	year         = 2022,
+	month        = nov,
+	howpublished = {\url{https://doc.rust-lang.org/book/}},
+}
+
+@misc{krabcake,
+	title        = {Krabcake: A Rust UB Detector},
+	author       = {Klock, Felix S. and Garza, Bryan},
+	year         = 2023,
+	month        = apr,
+	location     = {Paris},
+	url          = {https://pnkfx.org/presentations/krabcake-rust-verification-2023-april.pdf},
+	note         = {Accessed: 2023-10-20},
+	howpublished = {Rust Verification Workshop},
+}
+
+@article{krippendorff,
+	title        = {
+		Reliability in Content Analysis: Some Common Misconceptions and
+		Recommendations
+	},
+	author       = {Krippendorff, K.},
+	year         = 2004,
+	month        = jul,
+	journal      = {Human Communication Research},
+	volume       = 30,
+	number       = 3,
+	pages        = {411–433},
+	doi          = {10.1093/hcr/30.3.411},
+	issn         = {0360-3989, 1468-2958},
+	language     = {en},
+}
+
+@article{lehmann23,
+	title        = {Flux: Liquid Types for Rust},
+	author       = {Lehmann, Nico and Geller, Adam T. and Vazou, Niki and Jhala, Ranjit},
+	year         = 2023,
+	month        = jun,
+	journal      = {Proc. ACM Program. Lang.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 7,
+	number       = {PLDI},
+	doi          = {10.1145/3591283},
+	url          = {https://doi.org/10.1145/3591283},
+	issue_date   = {June 2023},
+	abstract     = {
+		We introduce Flux, which shows how logical refinements can work hand in glove
+		with Rust's ownership mechanisms to yield ergonomic type-based verification
+		of low-level pointer manipulating programs. First, we design a novel refined
+		type system for Rust that indexes mutable locations, with pure (immutable)
+		values that can appear in refinements, and then exploits Rust's ownership
+		mechanisms to abstract sub-structural reasoning about locations within Rust's
+		polymorphic type constructors, while supporting strong updates. We formalize
+		the crucial dependency upon Rust's strong aliasing guarantees by exploiting
+		the Stacked Borrows aliasing model to prove that "well-borrowed evaluations
+		of well-typed programs do not get stuck". Second, we implement our type
+		system in Flux, a plug-in to the Rust compiler that exploits the factoring of
+		complex invariants into types and refinements to efficiently synthesize loop
+		annotations-including complex quantified invariants describing the contents
+		of containers-via liquid inference. Third, we evaluate Flux with a benchmark
+		suite of vector manipulating programs and parts of a previously verified
+		secure sandboxing library to demonstrate the advantages of refinement types
+		over program logics as implemented in the state-of-the-art Prusti verifier.
+		While Prusti's more expressive program logic can, in general, verify deep
+		functional correctness specifications, for the lightweight but ubiquitous and
+		important verification use-cases covered by our benchmarks, liquid typing
+		makes verification ergonomic by slashing specification lines by a factor of
+		two, verification time by an order of magnitude, and annotation overhead from
+		up to 24\% of code size (average 14\%), to nothing at all.
+	},
+	articleno    = 169,
+	numpages     = 25,
+	keywords     = {liquid types, Rust, heap-manipulating programs},
+}
+
+@misc{llvm,
+	title        = {The LLVM Language Reference Manual},
+	author       = {LLVM Community},
+	year         = 2022,
+	month        = nov,
+	howpublished = {\url{https://llvm.org/docs/LangRef.html\#calling-conventions}},
+}
+
+@article{mcdonald_irr,
+	title        = {
+		Reliability and Inter-Rater Reliability in Qualitative Research: Norms and
+		Guidelines for CSCW and HCI Practice
+	},
+	author       = {McDonald, Nora and Schoenebeck, Sarita and Forte, Andrea},
+	year         = 2019,
+	month        = nov,
+	journal      = {Proc. ACM Hum.-Comput. Interact.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 3,
+	number       = {CSCW},
+	doi          = {10.1145/3359174},
+	url          = {https://doi.org/10.1145/3359174},
+	issue_date   = {November 2019},
+	articleno    = 72,
+	numpages     = 23,
+	keywords     = {
+		content analysis, inter-rater reliability, interviews, qualitative methods,
+		IRR
+	},
+}
+
+@book{miles20,
+	title        = {Qualitative data analysis: a methods sourcebook},
+	author       = {Miles, Matthew B. and Huberman, A. Michael and Saldaña, Johnny},
+	year         = 2020,
+	publisher    = {SAGE},
+	address      = {Los Angeles London New Delhi Singapore Washington DC Melbourne},
+	isbn         = {978-1-5063-5307-4},
+	edition      = 4,
+	language     = {eng},
+}
+
+@misc{cui23,
+	title        = {
+		Is unsafe an Achilles' Heel? A Comprehensive Study of Safety Requirements in
+		Unsafe Rust Programming
+	},
+	author       = {Mohan Cui and Suran Sun and Hui Xu and Yangfan Zhou},
+	year         = 2023,
+	doi          = {10.48550/arXiv.2308.04785},
+	url          = {https://doi.org/10.48550/arXiv.2011.06171},
+	eprint       = {2308.04785},
+	archiveprefix = {arXiv},
+	primaryclass = {cs.SE},
+}
+
+@online{mozilla_oxidation,
+	title        = {Oxidation},
+	author       = {Mozilla Community},
+	year         = 2022,
+	url          = {https://wiki.mozilla.org/Oxidation},
+	lastaccessed = {2022-11-21},
+}
+
+@online{WinNT,
+	title        = {{MS Windows NT} Kernel Description},
+	author       = {MultiMedia LLC},
+	year         = 1999,
+	url          = {
+		http://web.archive.org/web/20080207010024/http://www.808multimedia.com/winnt/kernel.htm
+	},
+	urldate      = {2010-09-30},
+}
+
+@inproceedings{10.1145/1250734.1250746,
+	title        = {Valgrind: a framework for heavyweight dynamic binary instrumentation},
+	author       = {Nethercote, Nicholas and Seward, Julian},
+	year         = 2007,
+	booktitle    = {
+		Proceedings of the 28th ACM SIGPLAN Conference on Programming Language Design
+		and Implementation
+	},
+	location     = {San Diego, California, USA},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {PLDI '07},
+	pages        = {89–100},
+	doi          = {10.1145/1250734.1250746},
+	isbn         = 9781595936332,
+	url          = {https://doi.org/10.1145/1250734.1250746},
+	abstract     = {
+		Dynamic binary instrumentation (DBI) frameworks make it easy to build dynamic
+		binary analysis (DBA) tools such as checkers and profilers. Much of the focus
+		on DBI frameworks has been on performance; little attention has been paid to
+		their capabilities. As a result, we believe the potential of DBI has not been
+		fully exploited.In this paper we describe Valgrind, a DBI framework designed
+		for building heavyweight DBA tools. We focus on its unique support for shadow
+		values-a powerful but previously little-studied and difficult-to-implement
+		DBA technique, which requires a tool to shadow every register and memory
+		value with another value that describes it. This support accounts for several
+		crucial design features that distinguish Valgrind from other DBI frameworks.
+		Because of these features, lightweight tools built with Valgrind run
+		comparatively slowly, but Valgrind can be used to build more interesting,
+		heavyweight tools that are difficult or impossible to build with other DBI
+		frameworks such as Pin and DynamoRIO.
+	},
+	numpages     = 12,
+	keywords     = {
+		Memcheck, Valgrind, dynamic binary analysis, dynamic binary instrumentation,
+		shadow values
+	},
+}
+
+@article{seward07,
+	title        = {Valgrind: a framework for heavyweight dynamic binary instrumentation},
+	author       = {Nethercote, Nicholas and Seward, Julian},
+	year         = 2007,
+	month        = jun,
+	journal      = {SIGPLAN Not.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 42,
+	number       = 6,
+	pages        = {89–100},
+	doi          = {10.1145/1273442.1250746},
+	issn         = {0362-1340},
+	url          = {https://doi.org/10.1145/1273442.1250746},
+	issue_date   = {June 2007},
+	abstract     = {
+		Dynamic binary instrumentation (DBI) frameworks make it easy to build dynamic
+		binary analysis (DBA) tools such as checkers and profilers. Much of the focus
+		on DBI frameworks has been on performance; little attention has been paid to
+		their capabilities. As a result, we believe the potential of DBI has not been
+		fully exploited.In this paper we describe Valgrind, a DBI framework designed
+		for building heavyweight DBA tools. We focus on its unique support for shadow
+		values-a powerful but previously little-studied and difficult-to-implement
+		DBA technique, which requires a tool to shadow every register and memory
+		value with another value that describes it. This support accounts for several
+		crucial design features that distinguish Valgrind from other DBI frameworks.
+		Because of these features, lightweight tools built with Valgrind run
+		comparatively slowly, but Valgrind can be used to build more interesting,
+		heavyweight tools that are difficult or impossible to build with other DBI
+		frameworks such as Pin and DynamoRIO.
+	},
+	numpages     = 12,
+	keywords     = {
+		Memcheck, Valgrind, dynamic binary analysis, dynamic binary instrumentation,
+		shadow values
+	},
+}
+
+@misc{actix_web_postmortem,
+	title        = {Actix project postmortem},
+	author       = {Nikolay Kim},
+	year         = 2020,
+	journal      = {GitHub repository},
+	publisher    = {GitHub},
+	howpublished = {\url{https://github.com/fafhrd91/actix-web-postmortem}},
+}
+
+@book{patton1990qualitative,
+	title        = {Qualitative evaluation and research methods},
+	author       = {Patton, Michael Quinn},
+	year         = 1990,
+	publisher    = {SAGE Publications, inc},
+}
+
+@inproceedings{ravitch09,
+	title        = {Automatic generation of library bindings using static analysis},
+	author       = {Ravitch, Tristan and Jackson, Steve and Aderhold, Eric and Liblit, Ben},
+	year         = 2009,
+	month        = jun,
+	booktitle    = {
+		Proceedings of the 30th ACM SIGPLAN Conference on Programming Language Design
+		and Implementation
+	},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	series       = {PLDI '09},
+	pages        = {352–362},
+	doi          = {10.1145/1542476.1542516},
+	isbn         = {978-1-60558-392-1},
+	url          = {https://doi.org/10.1145/1542476.1542516},
+	collection   = {PLDI '09},
+}
+
+@article{ravitch13,
+	title        = {Analyzing memory ownership patterns in C libraries},
+	author       = {Ravitch, Tristan and Liblit, Ben},
+	year         = 2013,
+	month        = jun,
+	journal      = {ACM SIGPLAN Notices},
+	volume       = 48,
+	number       = 11,
+	pages        = {97–108},
+	doi          = {10.1145/2555670.2464162},
+	issn         = {0362-1340},
+}
+
+@misc{cargobook,
+	title        = {The Cargo Book},
+	author       = {Rust~Community},
+	year         = 2023,
+	month        = oct,
+	howpublished = {\url{https://doc.rust-lang.org/cargo/index.html}},
+}
+
+@article{spiel19_gender,
+	title        = {How to do better with gender on surveys: a guide for HCI researchers},
+	author       = {Spiel, Katta and Haimson, Oliver L. and Lottridge, Danielle},
+	year         = 2019,
+	month        = jun,
+	journal      = {Interactions},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 26,
+	number       = 4,
+	pages        = {62–65},
+	doi          = {10.1145/3338283},
+	issn         = {1072-5520},
+	url          = {https://doi.org/10.1145/3338283},
+	issue_date   = {July-August 2019},
+	abstract     = {
+		Community + Culture features practitioner perspectives on designing
+		technologies for and with communities. We highlight compelling projects and
+		provocative points of view that speak to both community technology practice
+		and the interaction design field as a whole. --- Sheena Erete, Editor
+	},
+	numpages     = 4,
+}
+
+@inproceedings{sun18,
+	title        = {When Memory-Safe Languages Become Unsafe},
+	author       = {Sun, Mingshen and Zhang, Yulong and Wei, Tao},
+	year         = 2018,
+	booktitle    = {DEF CON China},
+	location     = {Seoul, South Korea},
+	address      = {Beijing, China},
+	series       = {DEF CON '18},
+	url          = {
+		https://infocondb.org/con/def-con/def-con-china-beta/when-memory-safe-languages-become-unsafe
+	},
+}
+
+@misc{ucg_ref_header_problem,
+	title        = {
+		Storing an object as \&Header, but reading the data past the end of the
+		header
+	},
+	author       = {Thom Chiovoloni},
+	year         = 2020,
+	month        = nov,
+	published    = {GitHub},
+	howpublished = {\url{https://github.com/rust-lang/unsafe-code-guidelines/issues/256}},
+}
+
+@online{reddit_unsafe_worried,
+	title        = {Should we be worried about proliferation of unsafe in Rust code?},
+	author       = {u/Linguistic-mystic},
+	year         = 2022,
+	url          = {
+		https://www.reddit.com/r/rust/comments/xc5wut/should\%5Fwe\%5Fbe\%5Fworried\%5Fabout\%5Fproliferation\%5Fof/?utm\%5Fsource=share\&utm\%5Fmedium=web2x\&context=3
+	},
+	urldate      = {2023-07-29},
+}
+
+@online{reddit_unsafe_stigma,
+	title        = {The Stigma Around Unsafe},
+	author       = {u/zraineri},
+	year         = 2022,
+	url          = {
+		https://www.reddit.com/r/rust/comments/y1u068/the\%5Fstigma\%5Faround\%5Funsafe/
+	},
+	urldate      = {2023-07-29},
+}
+
+@inproceedings{prusti_astrauskas19,
+	title        = {Leveraging {R}ust Types for Modular Specification and Verification},
+	author       = {V. Astrauskas and P. M\"uller and F. Poli and A. J. Summers},
+	year         = 2019,
+	journal      = {Proc. ACM Program. Lang.},
+	booktitle    = {Object-Oriented Programming Systems, Languages, and Applications (OOPSLA)},
+	publisher    = {ACM},
+	volume       = 3,
+	number       = {OOPSLA},
+	pages        = {147:1--147:30},
+	doi          = {10.1145/3360573},
+	url          = {http://doi.acm.org/10.1145/3360573},
+	issue_date   = {October 2019},
+	urltext      = {[Publisher]},
+}
+
+@misc{tree_borrows,
+	title        = {Tree Borrows},
+	author       = {Villani, Neven and Dreyer, Derek  and Jung, Ralf},
+	year         = 2023,
+	url          = {https://github.com/Vanille-N/tree-borrows/blob/master/full/main.pdf},
+	issue_date   = {July 2023},
+}
+
+@article{braun06,
+	title        = {Using thematic analysis in psychology},
+	author       = {Virginia Braun and Victoria Clarke},
+	year         = 2006,
+	journal      = {Qualitative Research in Psychology},
+	publisher    = {Routledge},
+	volume       = 3,
+	number       = 2,
+	pages        = {77--101},
+	doi          = {10.1191/1478088706qp063oa},
+	url          = {https://www.tandfonline.com/doi/abs/10.1191/1478088706qp063oa},
+	bdsk-url-2   = {https://doi.org/10.1191/1478088706qp063oa},
+}
+
+@online{rust_vuln_sei_23,
+	title        = {Rust Vulnerability Analysis and Maturity Challenges},
+	author       = {Wassermann, Garret and Svoboda, David},
+	year         = 2023,
+	url          = {
+		https://insights.sei.cmu.edu/blog/rust-vulnerability-analysis-and-maturity-challenges/
+	},
+	lastaccessed = {2023-06-29},
+}
+
+@article{crichton20,
+	title        = {The Usability of Ownership},
+	author       = {Will Crichton},
+	year         = 2020,
+	journal      = {CoRR},
+	volume       = {abs/2011.06171},
+	url          = {https://arxiv.org/abs/2011.06171},
+	eprinttype   = {arXiv},
+	eprint       = {2011.06171},
+	timestamp    = {Wed, 18 Nov 2020 16:48:35 +0100},
+	biburl       = {https://dblp.org/rec/journals/corr/abs-2011-06171.bib},
+	bibsource    = {dblp computer science bibliography, https://dblp.org},
+}
+
+@article{mckeeman98,
+	title        = {Differential Testing for Software},
+	author       = {William M. McKeeman},
+	year         = 1998,
+	journal      = {Digit. Tech. J.},
+	volume       = 10,
+	number       = 1,
+	pages        = {100--107},
+	url          = {https://www.hpl.hp.com/hpjournal/dtj/vol10num1/vol10num1art9.pdf},
+	timestamp    = {Mon, 23 Jan 2023 14:05:53 +0100},
+	biburl       = {https://dblp.org/rec/journals/dtj/McKeeman98.bib},
+	bibsource    = {dblp computer science bibliography, https://dblp.org},
+}
+
+@online{cloudflare_rust,
+	title        = {How we built Pingora, the proxy that connects Cloudflare to the Internet},
+	author       = {Wu, Yuchen and Hauck, Andrew},
+	year         = 2022,
+	url          = {
+		https://blog.cloudflare.com/how-we-built-pingora-the-proxy-that-connects-cloudflare-to-the-internet/
+	},
+	lastaccessed = {2022-11-21},
+}
+
+@online{panic_during_drop,
+	title        = {Trait std::ops::Drop},
+	author       = {{Rust Community}},
+	year         = 2024,
+	url          = {
+https://doc.rust-lang.org/std/ops/trait.Drop.html
+	},
+}
+
+
+
+@article{ghostcell21,
+	title        = {GhostCell: Separating Permissions from Data in Rust},
+	author       = {Yanovski, Joshua and Dang, Hoang-Hai and Jung, Ralf and Dreyer, Derek},
+	year         = 2021,
+	month        = aug,
+	journal      = {Proc. ACM Program. Lang.},
+	publisher    = {Association for Computing Machinery},
+	address      = {New York, NY, USA},
+	volume       = 5,
+	number       = {ICFP},
+	doi          = {10.1145/3473597},
+	url          = {https://doi.org/10.1145/3473597},
+	issue_date   = {August 2021},
+	abstract     = {
+		The Rust language offers a promising approach to safe systems programming
+		based on the principle of aliasing XOR mutability: a value may be either
+		aliased or mutable, but not both at the same time. However, to implement
+		pointer-based data structures with internal sharing, such as graphs or
+		doubly-linked lists, we need to be able to mutate aliased state. To support
+		such data structures, Rust provides a number of APIs that offer so-called
+		interior mutability: the ability to mutate data via method calls on a shared
+		reference. Unfortunately, the existing APIs sacrifice flexibility, concurrent
+		access, and/or performance, in exchange for safety. In this paper, we propose
+		a new Rust API called GhostCell which avoids such sacrifices by separating
+		permissions from data: it enables the user to safely synchronize access to a
+		collection of data via a single permission. GhostCell repurposes an old trick
+		from typed functional programming: branded types (as exemplified by Haskell's
+		ST monad), which combine phantom types and rank-2 polymorphism to simulate a
+		lightweight form of state-dependent types. We have formally proven the
+		soundness of GhostCell by adapting and extending RustBelt, a semantic
+		soundness proof for a representative subset of Rust, mechanized in Coq.
+	},
+	articleno    = 92,
+	numpages     = 30,
+	keywords     = {Rust, separation logics, type systems},
+}
+
+@book{Yin09,
+	title        = {Case study research: {Design} and methods},
+	author       = {Yin, Robert K},
+	year         = 2009,
+	publisher    = {SAGE Publications},
+	volume       = 5,
+}
+
+@inproceedings{dataraces,
+author = {Erickson, John and Musuvathi, Madanlal and Burckhardt, Sebastian and Olynyk, Kirk},
+title = {Effective data-race detection for the kernel},
+year = {2010},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Data races are an important class of concurrency errors where two threads erroneously access a shared memory location without appropriate synchronization. This paper presents DataCollider, a lightweight and effective technique for dynamically detecting data races in kernel modules. Unlike existing data-race detection techniques, DataCollider is oblivious to the synchronization protocols (such as locking disciplines) the program uses to protect shared memory accesses. This is particularly important for low-level kernel code that uses a myriad of complex architecture/device specific synchronization mechanisms. To reduce the runtime overhead, DataCollider randomly samples a small percentage of memory accesses as candidates for data-race detection. The key novelty of DataCollider is that it uses breakpoint facilities already supported by many hardware architectures to achieve negligible runtime overheads. We have implemented DataCollider for the Windows 7 kernel and have found 25 confirmed erroneous data races of which 12 have already been fixed.},
+booktitle = {Proceedings of the 9th USENIX Conference on Operating Systems Design and Implementation},
+pages = {151–162},
+numpages = {12},
+location = {Vancouver, BC, Canada},
+series = {OSDI'10}
+}
+
+
+@misc{relevantid,
+    title = {RelevantID®},
+    publisher = {Imperium},
+    url={https://www.imperium.com/relevantid/} 
+}
+
+@misc{liu18, 
+    title={Introducing reCAPTCHA v3: the new way to stop bots},
+    url={https://developers.google.com/search/blog/2018/10/introducing-recaptcha-v3-new-way-to},
+    journal={Google Search Central},
+    author={Liu, Wei}, 
+    year={2018},
+    month=oct,
+    language={en} 
+}

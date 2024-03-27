@@ -1,0 +1,26 @@
+We find that developers use \unsafe code for ergonomics, performance, and when they perceive that there is no alternative. Despite attempts to keep \unsafe code minimal and encapsulated, developers feel uncertain about its correctness. These results mirror findings from Holtervennhoff et al~\cite{holtervennhoff23}, and we compare our results with theirs in Sections~\ref{results:rq1} and~\ref{results:rq2}. Foreign function calls were used by most participants, and non-trivial differences between Rust and other languages made these calls difficult to encapsulate. Developers rarely audited their dependencies. Most had used Miri, but few used it to validate their test cases, and its lack of support for foreign function calls deterred some individuals from using it.
+
+\subsection{Demographics} We invited all \ArrayItem{responses.screening.raw} eligible candidates to participate in interviews, and we interviewed \ArrayItem{responses.screening.valid} who responded to our invitation. Of these participants, \ArrayItem{screening.affiliation.industry} had experience in industry, \ArrayItem{screening.affiliation.open.source} in open source development, \ArrayItem{screening.affiliation.academia} in academia, and \ArrayItem{screening.affiliation.rust.team} were members of the Rust team. They had 4.7 years of experience with Rust on average, and the most experienced participant had been using Rust for 10 years. 
+
+\FPeval{\degree}{round(clip(\ArrayItem{demo.education.bachelor's.degree} + \ArrayItem{demo.education.phd}+\ArrayItem{demo.education.master's.degree}),0)}
+\FPeval{\graduatedegree}{round(clip(\ArrayItem{demo.education.phd}+\ArrayItem{demo.education.master's.degree},0))}
+\FPeval{\belowforty}{round(clip(\ArrayItem{demo.age.18-29}+\ArrayItem{demo.age.30-39} ),0)}
+
+We received \ArrayItem{responses.survey.raw} survey responses, of which \ArrayItem{responses.survey.finished} were complete, \ArrayItem{responses.survey.without.fraud.detection} met our eligibility criteria, and \ArrayItem{responses.survey.valid} passed each of Qualtrics' measures for fraud detection. Hereafter, when we refer ``respondents,'' we include only those that are eligible. The majority were young, educated, identified as male, and had experience in either industry or open-source development. Nearly \degree\% had completed at least a bachelor's degree, and \graduatedegree\% had completed a graduate degree. Most respondents (\belowforty\%) were younger than 40 years old, and \ArrayItemRounded{demo.age.18-29}\% were between the ages of 18 and 29. We followed Spiel et al.'s~\cite{spiel19_gender} guidelines for ethically surveying respondents' gender; 80\% identified as ``Man'', \ArrayItemRounded{demo.gender.non-binary}\% identified as ``Non-binary,'' \ArrayItemRounded{demo.gender.woman}\% identified as ``Woman'' and \ArrayItemRounded{demo.gender.prefer.not.to.disclose}\% did not disclose their gender. On average, survey respondents had more than a decade of experience in software engineering, more than 5 years of experience in both C and \CC{}, and just over 4 years of experience using Rust.
+
+\subsection{Why unsafe?}
+\label{results:rq1}
+\input{sections/results/1.tex}
+
+\subsection{Design \& Use of Unsafe APIs}
+\label{results:rq2}
+\input{sections/results/2.tex}
+
+\subsection{Foreign Bindings \& Memory Models}
+\input{sections/results/3.tex}
+
+\subsection{Validation}
+\input{sections/results/4.tex}
+
+\subsection{Community \& Culture}
+\input{sections/results/5.tex}

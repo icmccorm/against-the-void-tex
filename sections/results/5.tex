@@ -1,0 +1,38 @@
+Safety is one of the Rust community's core values. This informs positive practices, like safe encapsulation of \unsafe APIs, but can also be taken to extremes, as newcomers report unexpectedly harsh feedback from more experienced developers when they ask for advice on community forums. However, community resources are essential to understand the nuances of Rust's evolving semantics.
+\subsubsection{A Preference for Safety}
+Participants perceived that the Rust community has a strong preference for safety that affects tool design and development practices. Participants avoided exposing \unsafe APIs in libraries partly because of the perception that other Rust developers would otherwise avoid using their crate: \ilquote{everyone wants a safe interface... no one really wants to go use the \unsafe heavy ones}{9}.\FPeval{\avoidedunsafeapi}{round(\ArrayItem{rq3.avoided.most.of.the.time} + \ArrayItem{rq3.avoided.always}, 0)}
+An overwhelming majority of survey respondents also preferred safe APIs; \avoidedunsafeapi\% would choose a safe API over an \unsafe alternative most of the time, if not always. One library author viewed safe encapsulation as an inevitable requirement. Even though exposing an \unsafe trait places the burden of responsibility on users, they would still blame the library.
+
+\begin{pquote}{7}
+So in theory, the burden of proof is on them, but also if they implement something improperly, then they're going to create a ticket because they'll be like, oh, ``I use your library and it's a fault.''
+\end{pquote}
+
+\subsubsection{A Stigma Against Unsafe}
+Three participants observed a negative sentiment from other members of the Rust community toward any risk of undefined behavior. This was typically described in extreme terms: \ilquote{you have even the slightest concession to undefined behavior, and you've committed a crime against humanity}{7}. One participant perceived that this type of \ilquote{knee-jerk}{7} reaction was common toward newcomers asking for advice on community forums. They believed that these individuals were likely unaware of safer alternatives or the risks of their design choices. Fitting this pattern, another participant posted on a forum asking for advice on a potentially unsound optimization, and they received feedback that they felt was unnecessarily harsh.
+
+
+
+\FPeval{\negativeview}{round(\ArrayItem{rq6.perception.general.extremely.negatively} + \ArrayItem{rq6.perception.general.somewhat.negatively}, 0)}
+
+Survey respondents were prompted to evaluate their perception of the Rust community's view toward \unsafe code that they write, as well as \unsafe code in general. Most respondents were unsure about how \textit{their} \unsafe code was perceived, but \negativeview\% felt that the Rust community views \unsafe code at least somewhat negatively overall.
+
+\subsubsection{Shifting Ground}
+Interview participants had a collective sense of uncertainty about Rust's semantics. Participants perceived that Rust lacked a formal specification and that guidelines for \unsafe code were incomplete.
+
+\begin{pquote}{10}
+I think the biggest issue with Rust's {\normalfont \unsafe} isn't necessarily the tools, but just the spec\textemdash or, rather, the absence of the spec. If you write {\normalfont \unsafe} code today, you write it against the void.
+\end{pquote}
+
+
+\FPeval{\adequacymost}{round(\ArrayItem{rq6.adequate.most.of.the.time} +
+\ArrayItem{rq6.adequate.always},0)}
+\FPeval{\adequacyalways}{round(\ArrayItem{rq6.adequate.always},0)}
+
+A few interview participants encountered situations where the precise definition of undefined behavior was still unclear. One participant needed to create a mutable reference to uninitialized memory, but this is considered undefined behavior by Rust's current semantics~\cite{ucg_ref_ub}. A similar debate occurred involving what one participant referred to as the \ilquote{ref header problem}{10}, which is also documented in an issue in the Unsafe Code Guidelines repository~\cite{ucg_ref_header_problem}. They wished to be able to take a reference to the first field of a product type and use it to create valid references to adjacent fields using integer offsets. This was considered undefined behavior under \textit{Stacked Borrows}, but it is now valid under \textit{Tree Borrows} semantics. Additionally, multiple participants were uncertain about how to handle the case when a program panics during a \code{Drop}. In contrast, the majority (\adequacymost\%) of survey respondents found that the Rust community's documentation and guidance was adequate for them to know how to use \unsafe code correctly most of the time, if not always. This suggests that concerns about Rust's evolving semantics, while important, are a niche issue for most developers that engage with \unsafe code.
+
+
+
+
+\rsqfive Interview participants perceived that Rust developers prefer safe APIs, which incentivized them to avoid exposing \unsafe endpoints. The Rust community perceives \unsafe code somewhat negatively, and when reaching out to community members for feedback, newcomers are met with harsh reactions to their use of \unsafe code or their lack of caution toward undefined behavior. Developers rely on community guidance to understand what comprises undefined behavior, which has shifted as Rust has matured. However, Rust's documentation is typically adequate for them to know how to use \unsafe correctly.
+
+
